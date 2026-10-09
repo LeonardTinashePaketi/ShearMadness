@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shear Madness | Barbershop & Hair Cafe — Somerset West, Helderberg</title>
+<meta name="description" content="Shear Madness — Somerset West's award-winning barbershop & hair cafe. Run by Alvin & Shireen. Gents cuts, fades, shaves, beard work, ladies wash/cut/blow & treatments. Book via WhatsApp or Fresha.">
+<meta name="keywords" content="hair and beauty salon near me, barbershop in Somerset West, best barber near me, men's haircuts Somerset West, fade haircut Somerset West, beard trim Somerset West, walk-in barber Somerset West, gentlemen's grooming Somerset West, hair salon Somerset West, hairdressers near me, best hair stylist in Somerset West, balayage Somerset West, hair color and highlights Somerset West, women's haircuts Somerset West, Alvin Kayser barber, Shireen Losper, The Avenues Drama Street">
+<meta name="author" content="Shear Madness Barbershop">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="ZA-WC">
+<meta name="geo.placename" content="Somerset West, Helderberg">
+<meta name="geo.position" content="-34.0825;18.8510">
+<meta property="og:title" content="Shear Madness | Barbershop & Hair Cafe — Somerset West">
+<meta property="og:description" content="Award-winning barbershop & hair cafe in The Avenues, Somerset West. 1,771+ five-star reviews.">
+<meta property="og:type" content="business.business">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SHEAR MADNESS — Complete Stylesheet
+   Color tokens follow the Aether 9 design system,
+   gold/brass accent added for a barbershop feel.
+   ============================================================ */
+:root {
+  --bg: #000000;
+  --surface: #18181B;
+  --surface-2: #0a0a0a;
+  --border: #27272A;
+  --text: #FFFFFF;
+  --text-dim: #A1A1AA;
+  --gold: #C9A961;
+  --gold-soft: #E8D49A;
+  --radius-card: 16px;
+  --radius-control: 8px;
+  --radius-pill: 9999px;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+input, textarea, select { font-family: inherit; }
+
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.section { padding: 80px 0; }
+.section-header { margin-bottom: 56px; max-width: 720px; }
+.section-header h2 {
+  font-family: var(--font-body);
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-top: 12px;
+}
+.section-header h2 em { font-family: var(--font-serif); font-weight: 400; color: var(--gold); font-style: italic; }
+.section-header p { color: var(--text-dim); font-size: 17px; margin-top: 16px; max-width: 560px; }
+.accent-bar { width: 56px; height: 2px; background: var(--gold); margin-top: 16px; }
+
+/* ============ BUTTONS (gold bg, black text) ============ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: var(--radius-control);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--gold);
+  color: #0a0a0a;
+  border-color: var(--gold);
+}
+.btn-primary:hover {
+  background: var(--gold-soft);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(201,169,97,0.3);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+.btn-secondary:hover {
+  border-color: var(--text);
+  background: rgba(255,255,255,0.04);
+}
+.btn-whatsapp, .btn-fresha {
+  background: var(--gold);
+  color: #0a0a0a;
+  border-color: var(--gold);
+}
+.btn-whatsapp:hover, .btn-fresha:hover {
+  background: var(--gold-soft);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(201,169,97,0.3);
+}
+
+/* ============ HEADER ============ */
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 18px 0;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+.header.scrolled {
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 0;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.logo-mark {
+  height: 46px;
+  width: auto;
+  display: block;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav a {
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dim);
+  border-radius: var(--radius-control);
+  transition: color 0.2s ease;
+}
+.nav a:hover, .nav a.active { color: var(--text); }
+.header-cta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+.menu-toggle {
+  display: none;
+  width: 42px; height: 42px;
+  border-radius: var(--radius-control);
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  align-items: center; justify-content: center;
+}
+.menu-toggle span {
+  display: block; width: 18px; height: 2px;
+  background: var(--text);
+  position: relative;
+}
+.menu-toggle span::before, .menu-toggle span::after {
+  content: ''; position: absolute; left: 0;
+  width: 18px; height: 2px; background: var(--text);
+}
+.menu-toggle span::before { top: -6px; }
+.menu-toggle span::after { top: 6px; }
+.menu-toggle.open span { background: transparent; }
+.menu-toggle.open span::before { top: 0; transform: rotate(45deg); }
+.menu-toggle.open span::after { top: 0; transform: rotate(-45deg); }
+
+/* ============ HERO ============ */
+.hero {
+  padding: 180px 0 140px;
+  background-color: var(--surface-2);
+  background-image:
+    linear-gradient(90deg, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.65) 45%, rgba(0,0,0,0.35) 100%),
+    url('assets/shop/hero-shop.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid var(--border);
+  min-height: 720px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(201,169,97,0.10) 0%, transparent 50%),
+    radial-gradient(ellipse at 10% 90%, rgba(201,169,97,0.05) 0%, transparent 40%);
+  pointer-events: none;
+}
+/* Hero container — flush left, override the centered container */
+.hero > .container {
+  max-width: none;
+  margin: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+  position: relative;
+  z-index: 2;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.04);
+  margin-bottom: 28px;
+}
+.hero-eyebrow .dot {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--gold);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.hero h1 {
+  font-family: var(--font-body);
+  font-size: clamp(48px, 7vw, 96px);
+  font-weight: 500;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+.hero h1 .gold { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+.hero p.lead { font-size: 19px; color: var(--text-dim); max-width: 580px; margin-bottom: 36px; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero-meta {
+  display: flex; gap: 32px; flex-wrap: wrap;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+.hero-meta-item .num {
+  font-family: var(--font-serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+.hero-meta-item .num em { color: var(--gold); font-style: normal; }
+.hero-meta-item .lbl {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ============ TRUST STRIP ============ */
+.trust-strip {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+  background: var(--surface-2);
+}
+.trust-strip-inner {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+.trust-item { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text-dim); }
+.trust-item svg { flex-shrink: 0; color: var(--gold); }
+.trust-item strong { color: var(--text); font-weight: 600; display: block; }
+
+/* ============ WHY SHEAR MADNESS PITCH ============ */
+.madness-pitch { max-width: 820px; margin: 0 auto; font-size: 17px; line-height: 1.75; color: var(--text-dim); }
+.madness-pitch p { margin-bottom: 22px; }
+.pitch-lead {
+  font-size: 22px !important;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.4 !important;
+  margin-bottom: 32px !important;
+}
+.pitch-close {
+  margin-top: 40px;
+  padding: 48px 0 8px;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+.madness-pitch .pc-aside {
+  font-style: italic;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+.madness-pitch .pc-headline {
+  font-size: clamp(32px, 5vw, 48px);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+.madness-pitch .pc-text {
+  max-width: 660px;
+  margin: 0 auto 32px;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.pc-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ============ SERVICES ============ */
+.services { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.service-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  transition: all 0.3s ease;
+}
+.service-card:hover { border-color: rgba(201,169,97,0.4); transform: translateY(-2px); }
+.service-head { display: flex; justify-content: space-between; align-items: start; gap: 16px; }
+.service-num { font-family: var(--font-mono); font-size: 12px; color: var(--gold); letter-spacing: 0.15em; }
+.service-price { font-family: var(--font-serif); font-size: 24px; font-weight: 700; color: var(--gold); }
+.service-card h3 { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; }
+.service-card p { color: var(--text-dim); font-size: 14px; line-height: 1.6; }
+.service-meta {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.chip {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: rgba(255,255,255,0.02);
+}
+.service-book {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gold);
+  color: #0a0a0a;
+  padding: 12px 16px;
+  border-radius: var(--radius-control);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.service-book:hover { background: var(--gold-soft); transform: translateY(-1px); }
+.services-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ============ HOW IT WORKS ============ */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.step-card { padding: 28px 0; border-top: 1px solid var(--border); counter-increment: step; }
+.step-card::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 20px;
+}
+.step-card h4 { font-size: 20px; font-weight: 500; margin-bottom: 10px; }
+.step-card p { font-size: 14px; color: var(--text-dim); }
+
+/* ============ ABOUT / VISIT ============ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-image {
+  aspect-ratio: 4/5;
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.about-image-badge {
+  position: absolute; bottom: 24px; left: 24px;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  border-radius: var(--radius-control);
+  display: flex; align-items: center; gap: 14px;
+}
+.about-image-badge .big-num {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--gold);
+}
+.about-image-badge .badge-info { font-size: 12px; color: var(--text-dim); }
+.about-image-badge .badge-info strong { color: var(--text); display: block; }
+.about-content h2 {
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 16px 0 24px;
+}
+.about-content h2 em { font-family: var(--font-serif); font-weight: 400; color: var(--gold); font-style: italic; }
+.about-pillars { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+.pillar {
+  display: flex; gap: 16px; align-items: start;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+}
+.pillar svg { color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.pillar strong { display: block; font-size: 15px; margin-bottom: 4px; }
+.pillar span { font-size: 13px; color: var(--text-dim); }
+
+/* ============ TEAM ============ */
+.team { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.team-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.team-card:hover { transform: translateY(-4px); border-color: rgba(201,169,97,0.3); }
+.team-photo {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #27272A, #18181B);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 48px;
+  font-style: italic;
+  color: var(--gold);
+  overflow: hidden;
+  position: relative;
+}
+.team-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============ IMAGE FALLBACK ============ */
+.img-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #27272A, #18181B);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+}
+img.broken { display: none !important; }
+img.broken + .img-fallback { display: flex; }
+.team-info { padding: 22px 24px; }
+.team-info .role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.team-info h4 { font-size: 19px; font-weight: 500; margin-bottom: 6px; }
+.team-info .stars { color: var(--gold); font-size: 14px; letter-spacing: 1px; margin-bottom: 8px; }
+.team-info .reviews { font-size: 12px; color: var(--text-dim); }
+
+/* ============ PORTFOLIO ============ */
+.filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 32px;
+}
+.filter-btn {
+  padding: 10px 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.filter-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+.filter-btn.active { background: var(--gold); color: #000; border-color: var(--gold); }
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.portfolio-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.portfolio-card:hover { transform: translateY(-4px); border-color: rgba(201,169,97,0.3); }
+.portfolio-img {
+  aspect-ratio: 4/5;
+  background: linear-gradient(135deg, #27272A, #18181B);
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.portfolio-tag {
+  position: absolute; top: 12px; left: 12px;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.portfolio-info { padding: 20px; }
+.portfolio-info h4 { font-size: 17px; font-weight: 500; margin-bottom: 6px; }
+.portfolio-info span { font-size: 13px; color: var(--text-dim); }
+
+/* ============ TESTIMONIALS ============ */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.testimonial-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  position: relative;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.testimonial-card::before {
+  content: '"';
+  position: absolute; top: 16px; right: 24px;
+  font-family: var(--font-serif);
+  font-size: 80px;
+  color: var(--gold);
+  opacity: 0.2;
+  line-height: 1;
+}
+.testimonial-stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; }
+.testimonial-text { font-size: 16px; line-height: 1.6; flex: 1; }
+.testimonial-author {
+  display: flex; align-items: center; gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.testimonial-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: grid; place-items: center;
+  font-weight: 700; color: #000;
+}
+.testimonial-author-info strong { display: block; font-size: 14px; }
+.testimonial-author-info span { font-size: 12px; color: var(--text-dim); }
+.review-cta {
+  margin-top: 48px;
+  text-align: center;
+  padding: 32px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+}
+.review-cta .stars-big { color: var(--gold); font-size: 22px; letter-spacing: 4px; margin-bottom: 12px; }
+.review-cta h3 { font-size: 22px; font-weight: 500; margin-bottom: 8px; }
+.review-cta p { color: var(--text-dim); font-size: 15px; margin-bottom: 20px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+/* ============ SHOP ============ */
+.shop { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.shop-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: all 0.3s ease;
+}
+.shop-card:hover { transform: translateY(-4px); border-color: rgba(201,169,97,0.3); }
+.shop-img {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, #27272A, #18181B);
+  position: relative;
+  overflow: hidden;
+}
+.shop-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.shop-body { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.shop-cat { font-family: var(--font-mono); font-size: 10px; color: var(--gold); letter-spacing: 0.15em; text-transform: uppercase; }
+.shop-card h4 { font-size: 16px; font-weight: 500; }
+.shop-desc { font-size: 13px; color: var(--text-dim); flex: 1; }
+.shop-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+.shop-price { font-family: var(--font-serif); font-size: 22px; font-weight: 700; color: var(--gold); }
+.shop-order {
+  background: var(--gold);
+  color: #0a0a0a;
+  padding: 8px 14px;
+  border-radius: var(--radius-control);
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.shop-order:hover { background: var(--gold-soft); }
+
+/* ============ BOOKING ============ */
+.booking { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.booking-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 40px;
+}
+.booking-options {
+  display: flex; gap: 8px; padding: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-pill);
+  margin-bottom: 24px;
+}
+.booking-tab {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dim);
+  text-align: center;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.booking-tab.active { background: var(--gold); color: #000; }
+.tab-badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.tab-badge-primary { background: #0a0a0a; color: var(--gold); }
+.tab-badge-secondary { background: rgba(0,122,255,0.2); color: #007AFF; }
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group.full { grid-column: 1 / -1; }
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-submit { margin-top: 20px; }
+.form-submit .btn { width: 100%; padding: 16px 24px; font-size: 15px; }
+.form-note { font-size: 12px; color: var(--text-dim); margin-top: 14px; text-align: center; }
+.form-fresha-cta { text-align: center; padding: 24px 0; }
+.form-fresha-cta p { color: var(--text-dim); margin-bottom: 20px; font-size: 15px; }
+.form-fresha-cta .btn { padding: 16px 32px; font-size: 16px; }
+
+.booking-info h2 {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 12px 0 20px;
+}
+.booking-info h2 em { font-family: var(--font-serif); color: var(--gold); font-style: italic; font-weight: 400; }
+.booking-info > p { color: var(--text-dim); margin-bottom: 32px; }
+.contact-list { display: flex; flex-direction: column; gap: 16px; }
+.contact-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-control);
+  transition: border-color 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.contact-row:hover { border-color: rgba(201,169,97,0.3); }
+.contact-row .icon {
+  width: 44px; height: 44px;
+  background: rgba(201,169,97,0.18);
+  border: 1px solid rgba(201,169,97,0.3);
+  border-radius: 10px;
+  display: grid; place-items: center;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.contact-row .info-label { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.12em; text-transform: uppercase; }
+.contact-row .info-value { font-size: 15px; font-weight: 500; }
+.social-row { display: flex; gap: 10px; margin-top: 24px; }
+.social-link {
+  width: 44px; height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: grid; place-items: center;
+  color: var(--text-dim);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.social-link:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ============ FINAL CTA ============ */
+.final-cta {
+  padding: 100px 0;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,169,97,0.10) 0%, transparent 60%);
+  pointer-events: none;
+}
+.final-cta-inner { position: relative; max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.final-cta h2 {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 16px 0 20px;
+}
+.final-cta h2 em { font-family: var(--font-serif); color: var(--gold); font-style: italic; font-weight: 400; }
+.final-cta p { color: var(--text-dim); font-size: 18px; margin-bottom: 32px; }
+.final-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ============ FAQ ============ */
+.faq-list { display: flex; flex-direction: column; border-top: 1px solid var(--border); }
+.faq-item { border-bottom: 1px solid var(--border); padding: 24px 0; cursor: pointer; }
+.faq-question {
+  display: flex; justify-content: space-between; align-items: center; gap: 24px;
+  font-size: 18px;
+  font-weight: 500;
+}
+.faq-toggle {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: grid; place-items: center;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.faq-item.open .faq-toggle { transform: rotate(45deg); background: var(--gold); color: #000; border-color: var(--gold); }
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  color: var(--text-dim);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.faq-item.open .faq-answer { max-height: 300px; padding-top: 16px; }
+
+/* ============ FOOTER ============ */
+.footer {
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+  padding: 48px 0 20px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 32px;
+}
+.footer-brand .logo-mark { height: 42px; }
+.footer-brand p { color: var(--text-dim); font-size: 14px; max-width: 320px; margin-top: 16px; }
+.footer-col h5 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col a { color: var(--text-dim); font-size: 14px; text-decoration: none; transition: color 0.2s ease; }
+.footer-col a:hover { color: var(--gold); }
+.footer-col li { color: var(--text-dim); font-size: 14px; }
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.footer-bottom a { color: var(--text-dim); text-decoration: none; transition: color 0.2s ease; }
+.footer-bottom a:hover { color: var(--gold); }
+.footer-bottom .gold-text { color: var(--gold); font-weight: 600; }
+
+/* ============ FLOATING WHATSAPP ============ */
+.float-wa {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  z-index: 90;
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  display: grid; place-items: center;
+  box-shadow: 0 8px 24px rgba(37,211,102,0.4);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+.float-wa:hover { transform: scale(1.08); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .hero { min-height: 600px; padding: 160px 0 100px; }
+  .trust-strip-inner { grid-template-columns: repeat(2, 1fr); }
+  .services-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .shop-grid { grid-template-columns: repeat(3, 1fr); }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid, .booking-grid { grid-template-columns: 1fr; gap: 48px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 768px) {
+  .section { padding: 56px 0; }
+  .nav { display: none; }
+  .nav.open {
+    display: flex;
+    position: fixed;
+    top: 70px; left: 0; right: 0;
+    flex-direction: column;
+    background: rgba(0,0,0,0.97);
+    backdrop-filter: blur(20px);
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav.open a { padding: 14px 16px; border-bottom: 1px solid var(--border); border-radius: 0; }
+  .menu-toggle { display: flex; }
+  .hero { padding: 140px 0 80px; }
+  .hero-meta { gap: 20px; }
+  .hero-meta-item .num { font-size: 26px; }
+  .services-grid, .testimonials-grid, .portfolio-grid { grid-template-columns: 1fr; }
+  .shop-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: 1fr; gap: 0; }
+  .trust-strip-inner { grid-template-columns: 1fr; gap: 20px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .booking-form { padding: 28px; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .section-header { margin-bottom: 36px; }
+}
+@media (max-width: 480px) {
+  .hero h1 { font-size: 44px; }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .pc-cta { flex-direction: column; align-items: stretch; }
+  .shop-grid, .team-grid { grid-template-columns: 1fr; }
+  .final-cta-buttons { flex-direction: column; }
+  .final-cta-buttons .btn { width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#home" class="logo" aria-label="Shear Madness home">
+      <img src="assets/logo.png" alt="Shear Madness Barbershop & Hair Cafe logo" class="logo-mark">
+    </a>
+    <nav class="nav" id="nav" aria-label="Primary">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#team">Team</a>
+      <a href="#portfolio">Listings</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a href="tel:+27614112559" class="btn btn-secondary" aria-label="Call us" style="padding: 10px 16px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+      <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+        Book via WhatsApp
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span class="label">The Avenues • Somerset West</span>
+      </div>
+      <h1>Style meets<br><span class="gold">relaxation</span>.</h1>
+      <p class="lead">Somerset West's most-loved barbershop &amp; hair cafe. Precision cuts, shaves, beard work &amp; indulgent hair treatments. The barbershop that's also your favourite new cafe.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+        <a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem/all-offer?venue=true" class="btn btn-fresha" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Book on Fresha
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <div class="num">10<em>+</em></div>
+          <div class="lbl">Years Combined Craft</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">1,771<em>★</em></div>
+          <div class="lbl">5-Star Reviews</div>
+        </div>
+        <div class="hero-meta-item">
+          <div class="num">2023</div>
+          <div class="lbl">Opened in Helderberg</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TRUST STRIP ========== -->
+<div class="trust-strip">
+  <div class="container trust-strip-inner">
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      <div><strong>Open Mon – Sat</strong>Book ahead or walk in</div>
+    </div>
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <div><strong>WhatsApp Booking</strong>Quickest way to lock your slot</div>
+    </div>
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <div><strong>5.0 on Fresha</strong>1,771+ verified reviews</div>
+    </div>
+    <div class="trust-item">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      <div><strong>For Everyone</strong>Gents, ladies, teens &amp; kids</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== WHY SHEAR MADNESS ========== -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Why Shear Madness</span>
+      <h2>More than a haircut.<br>A whole <em>experience</em>.</h2>
+      <p>An experience as sharp as the cut.</p>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="madness-pitch">
+      <p class="pitch-lead">Let&rsquo;s get one thing straight: we&rsquo;re the best barbershop &amp; hair caf&eacute; in the known universe... and quite possibly the multiverse too.</p>
+      <p>Never been in? Good news, it&rsquo;s not too late. Send us a WhatsApp, lock in your slot, and you&rsquo;re already halfway to greatness. All that&rsquo;s left is showing up.</p>
+      <p>Of course there&rsquo;s a little madness in how we do things, and we wouldn&rsquo;t have it any other way. Once you&rsquo;ve experienced what we do, you&rsquo;ll understand exactly why our reputation extends beyond planets, and galaxies.</p>
+      <p>When all is said and done, you&rsquo;ll definitely walk out feeling like Simba when Mufasa held him up over the Pride Lands for the first time for all to see. The Confidence. The Atmosphere. The Moment. Pure Magic.....</p>
+      <p>if you happen to disagree with our completely objective assessment of our greatness, you&rsquo;re more than welcome to stop by and we&rsquo;ll gladly hear you out, while giving you an Out-Of-This-World Cut.</p>
+      <div class="pitch-close">
+        <p class="pc-aside">Okay, jokes aside.</p>
+        <p class="pc-headline"><em>Don&rsquo;t take our word for it. Take a seat.</em></p>
+        <p class="pc-text">We mean every word above. All we ask for is one visit. Come through the shop and you won&rsquo;t regret it. 1,771+ five-star reviews say the same, but the only opinion that matters is yours, so sit in the chair and judge for yourself.</p>
+        <div class="pc-cta">
+          <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+          <a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem/all-offer?venue=true" class="btn btn-fresha" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Book on Fresha
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Services &amp; Pricing</span>
+      <h2>Built for every head<br>of hair in Helderberg.</h2>
+      <p>Real prices, real time, real craft. Tap any service to book on WhatsApp or Fresha.</p>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">01 / Gents</span>
+            <h3>Gents Cut</h3>
+          </div>
+          <span class="service-price">R250</span>
+        </div>
+        <p>Our signature precision cut. Consultation, scissor &amp; clipper work, hot towel finish and a style tailored to your face shape.</p>
+        <div class="service-meta">
+          <span class="chip">45 min</span>
+          <span class="chip">Alvin, Leighton or Yahees</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Gents%20Cut%20%28R250%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">02 / Gents</span>
+            <h3>Gents | Boys | Students</h3>
+          </div>
+          <span class="service-price">R200</span>
+        </div>
+        <p>The same precision cut for younger clients and students. A friendly, fast first barbershop experience.</p>
+        <div class="service-meta">
+          <span class="chip">45 min</span>
+          <span class="chip">Student-friendly</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Gents%20%7C%20Boys%20%7C%20Students%20cut%20%28R200%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">03 / Gents</span>
+            <h3>Teen / Student Cut</h3>
+          </div>
+          <span class="service-price">R220</span>
+        </div>
+        <p>A dedicated slot for teens and students. Sharp, modern cuts with the same attention to detail as our adult pricing.</p>
+        <div class="service-meta">
+          <span class="chip">45 min</span>
+          <span class="chip">ID required</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Teen%20%2F%20Student%20Cut%20%28R220%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">04 / Gents</span>
+            <h3>Buzz Cut</h3>
+          </div>
+          <span class="service-price">R150</span>
+        </div>
+        <p>Clean, even clipper buzz cut. Quick, sharp, and the perfect reset for a fresh start.</p>
+        <div class="service-meta">
+          <span class="chip">45 min</span>
+          <span class="chip">All clipper lengths</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Buzz%20Cut%20%28R150%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">05 / Gents</span>
+            <h3>Hot Towel Shave</h3>
+          </div>
+          <span class="service-price">R250</span>
+        </div>
+        <p>The luxurious tradition of a hot towel shave — pre-shave oil, hot lather, multiple razor passes and a cooling balm finish.</p>
+        <div class="service-meta">
+          <span class="chip">45 min</span>
+          <span class="chip">Classic ritual</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Hot%20Towel%20Shave%20%28R250%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">06 / Gents</span>
+            <h3>Beard Trim &amp; Shaping</h3>
+          </div>
+          <span class="service-price">R150</span>
+        </div>
+        <p>Beard sculpting, line-up, taper and detailing. Plus face waxing available on request for the cleanest finish possible.</p>
+        <div class="service-meta">
+          <span class="chip">30 min</span>
+          <span class="chip">Face wax add-on</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Beard%20Trim%20%26%20Shaping%20%28R150%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">07 / Ladies</span>
+            <h3>Wash, Cut &amp; Blow</h3>
+          </div>
+          <span class="service-price">R350</span>
+        </div>
+        <p>A complete ladies wash, cut and luxury blow-out with Shireen. Sit back, relax, and leave feeling transformed.</p>
+        <div class="service-meta">
+          <span class="chip">~60 min</span>
+          <span class="chip">With Shireen</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Wash%2C%20Cut%20%26%20Blow%20%28R350%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">08 / Ladies</span>
+            <h3>Root Touch-Up</h3>
+          </div>
+          <span class="service-price">R380</span>
+        </div>
+        <p>Cover greys or refresh your colour with our professional root touch-up service. Clean application, natural finish.</p>
+        <div class="service-meta">
+          <span class="chip">~75 min</span>
+          <span class="chip">With Shireen</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Root%20Touch-Up%20%28R380%29%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+      <div class="service-card">
+        <div class="service-head">
+          <div>
+            <span class="service-num">09 / Ladies</span>
+            <h3>Treatments &amp; Highlights</h3>
+          </div>
+          <span class="service-price">R450+</span>
+        </div>
+        <p>Indulgent hair treatments, full highlights, balayage and colour correction — tailored to your hair and lifestyle.</p>
+        <div class="service-meta">
+          <span class="chip">From R450</span>
+          <span class="chip">Quote on consult</span>
+        </div>
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20a%20quote%20for%20Treatments%20%26%20Highlights%20please." class="service-book" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="services-cta">
+      <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+        Quickest Book — WhatsApp
+      </a>
+      <a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem/all-offer?venue=true" class="btn btn-fresha" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Traditional Book — Fresha
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS ========== -->
+<section class="section" style="background: var(--bg);">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">How It Works</span>
+      <h2>Booked in four steps.<br>Sharp in one hour.</h2>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <h4>Pick a Service</h4>
+        <p>Browse our menu above — cuts, shaves, beard work, ladies' treatments and more.</p>
+      </div>
+      <div class="step-card">
+        <h4>Book on Fresha</h4>
+        <p>Choose your barber, date and time. Instant confirmation, no phone tag.</p>
+      </div>
+      <div class="step-card">
+        <h4>Or Message Us via WhatsApp</h4>
+        <p>Prefer WhatsApp? Drop us a message and we'll lock your slot in within minutes.</p>
+      </div>
+      <div class="step-card">
+        <h4>Walk In &amp; Settle</h4>
+        <p>Arrive at The Avenues, and let our team take it from there.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TEAM ========== -->
+<section class="section team" id="team">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Meet the Team</span>
+      <h2>The hands behind the chair.</h2>
+      <p>Run by Alvin &amp; Shireen, supported by a handpicked team of barbers and stylists. Every guest is looked after by people who genuinely care.</p>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="team-grid">
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="assets/team/alvin.jpg" alt="Alvin — Senior Barber at Shear Madness Somerset West"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback">Alvin</span>
+        </div>
+        <div class="team-info">
+          <span class="role">Senior Barber</span>
+          <h4>Alvin</h4>
+          <div class="stars">★★★★★</div>
+          <div class="reviews">5.0 on Fresha</div>
+        </div>
+      </article>
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="assets/team/shireen.jpg" alt="Shireen — Hair Specialist and Stylist at Shear Madness"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback">Shireen</span>
+        </div>
+        <div class="team-info">
+          <span class="role">Hair Specialist</span>
+          <h4>Shireen</h4>
+          <div class="stars">★★★★★</div>
+          <div class="reviews">5.0 on Fresha</div>
+        </div>
+      </article>
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="assets/team/leighton.jpg" alt="Leighton — Junior Barber at Shear Madness Somerset West"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback">Leighton</span>
+        </div>
+        <div class="team-info">
+          <span class="role">Junior Barber</span>
+          <h4>Leighton</h4>
+          <div class="stars">★★★★★</div>
+          <div class="reviews">5.0 on Fresha</div>
+        </div>
+      </article>
+      <article class="team-card">
+        <div class="team-photo">
+          <img src="assets/team/yahees.jpg" alt="Yahees — Junior Barber at Shear Madness Somerset West"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback">Yahees</span>
+        </div>
+        <div class="team-info">
+          <span class="role">Junior Barber</span>
+          <h4>Yahees</h4>
+          <div class="stars">★★★★★</div>
+          <div class="reviews">5.0 on Fresha</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PORTFOLIO ========== -->
+<section class="section" style="border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);" id="portfolio">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">The Portfolio</span>
+      <h2>Recent work from the chair.</h2>
+      <p>A few of our favourite cuts, fades and colour jobs from the last few weeks. Tap a filter to narrow it down.</p>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="gents">Gents Cuts</button>
+      <button class="filter-btn" data-filter="fades">Fades</button>
+      <button class="filter-btn" data-filter="beards">Beards</button>
+      <button class="filter-btn" data-filter="ladies">Ladies</button>
+      <button class="filter-btn" data-filter="colour">Colour</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <article class="portfolio-card" data-cat="gents fades">
+        <div class="portfolio-img">
+          <span class="portfolio-tag">FADE</span>
+          <img src="assets/portfolio/low-skin-fade.jpg"
+               alt="Sharp low fade haircut with razor line-up" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Low Skin Fade</span>
+        </div>
+        <div class="portfolio-info">
+          <h4>Low Skin Fade</h4>
+          <span>Gents cut • 45 min</span>
+        </div>
+      </article>
+      <article class="portfolio-card" data-cat="beards gents">
+        <div class="portfolio-img">
+          <span class="portfolio-tag">BEARD</span>
+          <img src="assets/portfolio/beard-sculpt.jpg"
+               alt="Beard sculpting and line-up" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Beard Sculpt</span>
+        </div>
+        <div class="portfolio-info">
+          <h4>Full Beard Sculpt</h4>
+          <span>Beard trim • 30 min</span>
+        </div>
+      </article>
+      <article class="portfolio-card" data-cat="colour ladies">
+        <div class="portfolio-img">
+          <span class="portfolio-tag">BALAYAGE</span>
+          <img src="assets/portfolio/honey-balayage.jpg"
+               alt="Hand-painted balayage hair colour" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Balayage</span>
+        </div>
+        <div class="portfolio-info">
+          <h4>Honey Balayage</h4>
+          <span>Ladies colour • with Shireen</span>
+        </div>
+      </article>
+      <article class="portfolio-card" data-cat="gents fades">
+        <div class="portfolio-img">
+          <span class="portfolio-tag">FADE</span>
+          <img src="assets/portfolio/mid-fade-texture.jpg"
+               alt="Modern mid fade with textured top men's haircut" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Mid Fade</span>
+        </div>
+        <div class="portfolio-info">
+          <h4>Mid Fade + Texture</h4>
+          <span>Gents cut • 50 min</span>
+        </div>
+      </article>
+      <article class="portfolio-card" data-cat="ladies">
+        <div class="portfolio-img">
+          <span class="portfolio-tag">LADIES</span>
+          <img src="assets/portfolio/layered-bob.jpg"
+               alt="Women's precision haircut and blow-dry" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Layered Bob</span>
+        </div>
+        <div class="portfolio-info">
+          <h4>Layered Bob</h4>
+          <span>Wash, Cut &amp; Blow • 60 min</span>
+        </div>
+      </article>
+      <article class="portfolio-card" data-cat="beards fades">
+        <div class="portfolio-img">
+          <span class="portfolio-tag">COMBO</span>
+          <img src="assets/portfolio/fade-beard-combo.jpg"
+               alt="Fade with beard detail combo" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Fade + Beard</span>
+        </div>
+        <div class="portfolio-info">
+          <h4>Fade + Beard Combo</h4>
+          <span>Signature • 1 hr</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Testimonials</span>
+      <h2>Loved by Helderberg.</h2>
+      <p>Don't take our word for it.</p>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"My 3 sons make me drive from Bellville to Somerset West for cuts with Alvin and I'm more than happy to do so. Great cuts and super friendly staff. Well worth it!"</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">★</div>
+          <div class="testimonial-author-info"><strong>Fresha Client</strong><span>Featured in The Newspaper</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Best barber in the Helderberg. Alvin takes his time to understand exactly what you want and delivers every single time. The cafe vibe is the cherry on top."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">TC</div>
+          <div class="testimonial-author-info"><strong>Tony C.</strong><span>Verified Fresha review</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Shireen did my wash, cut &amp; blow and I left looking and feeling like a million bucks. The whole experience was perfect."</p>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MH</div>
+          <div class="testimonial-author-info"><strong>Monique H.</strong><span>Verified Fresha review</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="review-cta">
+      <div class="stars-big">★★★★★</div>
+      <h3>Loved it? Leave us a review.</h3>
+      <p>Your honest feedback helps more Helderberg locals find us. Takes 30 seconds.</p>
+      <a href="https://www.google.com/maps/place/Shear+Madness+The+Avenues/@-34.08245,18.8510199,17z/" class="btn btn-primary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Leave a Review on Google
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== SHOP ========== -->
+<section class="section shop" id="shop">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Shop The Shelf</span>
+      <h2>Premium grooming,<br>in-store &amp; to your door.</h2>
+      <p>The professional-grade products we use in the chair — hit "Order" on any product, your request opens in WhatsApp pre-filled. Quickest way to get what you need.</p>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="shop-grid">
+      <article class="shop-card">
+        <div class="shop-img">
+          <img src="assets/shop/beard-oil.jpg"
+               alt="Premium beard oil bottle" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Beard Oil</span>
+        </div>
+        <div class="shop-body">
+          <span class="shop-cat">Beard Care</span>
+          <h4>Signature Beard Oil</h4>
+          <p class="shop-desc">Argan &amp; jojoba blend. Softens, conditions, smells incredible.</p>
+          <div class="shop-footer">
+            <span class="shop-price">R220</span>
+            <button class="shop-order" data-product="Signature Beard Oil" data-price="R220">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="shop-card">
+        <div class="shop-img">
+          <img src="assets/shop/clay-paste.jpg"
+               alt="Matte clay hair styling product" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Clay Paste</span>
+        </div>
+        <div class="shop-body">
+          <span class="shop-cat">Styling</span>
+          <h4>Matte Clay Paste</h4>
+          <p class="shop-desc">Strong hold, zero shine. For textured fades and modern quiffs.</p>
+          <div class="shop-footer">
+            <span class="shop-price">R180</span>
+            <button class="shop-order" data-product="Matte Clay Paste" data-price="R180">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="shop-card">
+        <div class="shop-img">
+          <img src="assets/shop/shampoo.jpg"
+               alt="Premium men's shampoo bottle" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Shampoo</span>
+        </div>
+        <div class="shop-body">
+          <span class="shop-cat">Hair Care</span>
+          <h4>Daily Strengthening Shampoo</h4>
+          <p class="shop-desc">Sulphate-free formula. Builds thickness, gentle on colour.</p>
+          <div class="shop-footer">
+            <span class="shop-price">R260</span>
+            <button class="shop-order" data-product="Daily Strengthening Shampoo" data-price="R260">Order</button>
+          </div>
+        </div>
+      </article>
+      <article class="shop-card">
+        <div class="shop-img">
+          <img src="assets/shop/cologne.jpg"
+               alt="Premium men's cologne fragrance" loading="lazy"
+               style="width:100%;height:100%;object-fit:cover;"
+               onerror="this.classList.add('broken');">
+          <span class="img-fallback" style="position:absolute; inset:0;">Cologne</span>
+        </div>
+        <div class="shop-body">
+          <span class="shop-cat">Fragrance</span>
+          <h4>No. 7 Eau de Parfum</h4>
+          <p class="shop-desc">Woody, warm, masculine. The signature Shear Madness scent.</p>
+          <div class="shop-footer">
+            <span class="shop-price">R540</span>
+            <button class="shop-order" data-product="No. 7 Eau de Parfum" data-price="R540">Order</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="label">Frequently Asked</span>
+      <h2>Got questions?<br>We've got answers.</h2>
+      <div class="accent-bar"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-question">
+          Do you accept walk-ins?
+          <span class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-answer">Absolutely — we're a walk-in-friendly shop. That said, booking ahead via Fresha or WhatsApp guarantees your slot and cuts your wait time dramatically, especially on Saturdays.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What are your opening hours?
+          <span class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-answer">Monday to Friday: 09:00 – 18:00. Saturday: 09:00 – 15:00. Sunday &amp; Public Holidays: Closed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you do ladies' hair and colour?
+          <span class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-answer">Yes — we're a full barbershop AND hair cafe. We offer ladies' wash, cut &amp; blow, root touch-ups, full highlights, balayage, treatments and Olaplex repairs — all with Shireen.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Where exactly are you?
+          <span class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-answer">We're in <strong>The Avenues</strong> — Shop 5C+D, 1 Drama Street, Somerset West, 7130. Right next to Spoon Bakery and Proof Wine Bar.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What's the difference between booking on Fresha vs WhatsApp?
+          <span class="faq-toggle"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span>
+        </div>
+        <div class="faq-answer"><strong>Fresha</strong> gives you instant confirmation and lets you choose your specific barber, date and time. <strong>WhatsApp</strong> is best for custom requests, quotes, kids' bookings or quick questions — we usually reply within minutes during shop hours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== BOOKING / CONTACT ========== -->
+<section class="section booking" id="contact">
+  <div class="container booking-grid">
+    <div>
+      <span class="label">Book Your Cut</span>
+      <h2>WhatsApp — the quickest way to <em>book</em>.<br><span style="font-size: 0.55em; color: var(--text-dim); font-style: normal; font-weight: 400; letter-spacing: 0;">Fresha for the traditionalists.</span></h2>
+      <p style="color: var(--text-dim); margin-bottom: 32px;">Fill in the form, hit send — and your booking opens in WhatsApp. One tap and your slot is locked in. Prefer the traditional route? Click the Book via Fresha button.</p>
+
+      <div class="booking-options">
+        <button class="booking-tab active" data-tab="whatsapp">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -2px; margin-right: 4px;"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          WhatsApp
+          <span class="tab-badge tab-badge-primary">Quickest</span>
+        </button>
+        <button class="booking-tab" data-tab="fresha">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align: -2px; margin-right: 4px;"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Fresha
+          <span class="tab-badge tab-badge-secondary">Traditional</span>
+        </button>
+      </div>
+
+      <form class="booking-form" id="bookingForm" onsubmit="return submitBooking(event)">
+        <div id="formFieldsWrap">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="bf-name">Full Name</label>
+              <input type="text" id="bf-name" name="name" placeholder="e.g. John Mitchell" required>
+            </div>
+            <div class="form-group">
+              <label for="bf-phone">Phone Number</label>
+              <input type="tel" id="bf-phone" name="phone" placeholder="082 123 4567" required>
+            </div>
+            <div class="form-group full">
+              <label for="bf-email">Email Address</label>
+              <input type="email" id="bf-email" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="bf-service">Service</label>
+              <select id="bf-service" name="service" required>
+                <option value="">Select a service…</option>
+                <option value="Gents Cut (R250)">Gents Cut — R250</option>
+                <option value="Gents | Boys | Students (R200)">Gents | Boys | Students — R200</option>
+                <option value="Teen / Student Cut (R220)">Teen / Student Cut — R220</option>
+                <option value="Buzz Cut (R150)">Buzz Cut — R150</option>
+                <option value="Hot Towel Shave (R250)">Hot Towel Shave — R250</option>
+                <option value="Beard Trim & Shaping (R150)">Beard Trim &amp; Shaping — R150</option>
+                <option value="Wash, Cut & Blow (R350)">Wash, Cut &amp; Blow — R350</option>
+                <option value="Root Touch-Up (R380)">Root Touch-Up — R380</option>
+                <option value="Treatments & Highlights (R450+)">Treatments &amp; Highlights — From R450</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="bf-date">Preferred Date</label>
+              <input type="date" id="bf-date" name="date" required>
+            </div>
+            <div class="form-group full">
+              <label for="bf-message">Additional Notes</label>
+              <textarea id="bf-message" name="message" placeholder="Tell us about the cut, any preferences, or who you'd like to see (Alvin, Shireen, Leighton, Yahees)…"></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-whatsapp" id="formSubmitBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+              Send via WhatsApp
+            </button>
+          </div>
+        </div>
+        <div id="formFreshaCta" class="form-fresha-cta" style="display:none;">
+          <p>Fresha has its own booking form — you'll choose your barber, date and time there.</p>
+          <a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem/all-offer?venue=true" class="btn btn-fresha" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Continue to Fresha
+          </a>
+        </div>
+        <p class="form-note" id="formNote">Your booking opens in WhatsApp — one tap to confirm with our team.</p>
+      </form>
+    </div>
+
+    <div>
+      <span class="label">Contact &amp; Visit</span>
+      <h2 style="font-size: clamp(28px, 3.5vw, 38px); font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; margin: 12px 0 24px;">The Avenues,<br><em style="font-family: var(--font-serif); color: var(--gold); font-style: italic; font-weight: 400;">Drama Street</em>.</h2>
+      <div class="contact-list">
+        <a href="tel:+27614112559" class="contact-row">
+          <div class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Phone</div>
+            <div class="info-value">061 411 2559</div>
+          </div>
+        </a>
+        <a href="https://maps.google.com/?daddr=Somerset+West,+The+Avenues,+1+Drama+Street,+shop+5C%2BD,+Cape+Town,+7130,+Western+Cape" class="contact-row" target="_blank" rel="noopener">
+          <div class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Address</div>
+            <div class="info-value">Shop 5C+D, The Avenues, 1 Drama Street, Somerset West, 7130</div>
+          </div>
+        </a>
+        <div class="contact-row">
+          <div class="icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="info-label">Hours</div>
+            <div class="info-value">Mon – Fri 09:00 – 18:00 • Sat 09:00 – 15:00<br><span style="color: var(--text-dim); font-size: 13px;">Sun &amp; Public Holidays — Closed</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="social-row">
+        <a href="https://www.instagram.com/shearmad_ness/" class="social-link" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+        <a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem" class="social-link" aria-label="Fresha" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></a>
+        <a href="https://wa.me/27614112559" class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg></a>
+      </div>
+      <div class="map-wrap" style="margin-top: 32px; aspect-ratio: 16/9; border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--border); background: var(--surface);">
+        <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=18.8426%2C-34.0878%2C18.8726%2C-34.0678&amp;layer=mapnik&amp;marker=-34.08245%2C18.85102" title="Shear Madness location — The Avenues, Somerset West" loading="lazy" style="width:100%;height:100%;border:0;filter: invert(0.9) hue-rotate(180deg);"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section class="final-cta">
+  <div class="final-cta-inner">
+    <span class="label">Your Chair Awaits</span>
+    <h2>Walk in. <em>Walk out</em> unstoppable.</h2>
+    <p>Whether it's your first visit or your fiftieth — the Shear Madness experience is the same. Real craft, real care, real connection.</p>
+    <div class="final-cta-buttons">
+      <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+        Book via WhatsApp
+      </a>
+      <a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem/all-offer?venue=true" class="btn btn-fresha" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Book on Fresha
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" aria-label="Shear Madness home">
+          <img src="assets/logo.png" alt="Shear Madness logo" class="logo-mark" style="height: 42px;">
+        </a>
+        <p>A modern barbershop and hair cafe in the heart of The Avenues, Somerset West. Established March 2023.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#portfolio">Listings</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Gents Cuts</a></li>
+          <li><a href="#services">Fades &amp; Shaves</a></li>
+          <li><a href="#services">Beard Work</a></li>
+          <li><a href="#services">Wash, Cut &amp; Blow</a></li>
+          <li><a href="#services">Highlights &amp; Colour</a></li>
+          <li><a href="#services">Treatments</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Get In Touch</h5>
+        <ul>
+          <li><a href="tel:+27614112559">061 411 2559</a></li>
+          <li><a href="https://wa.me/27614112559" target="_blank" rel="noopener">WhatsApp Direct</a></li>
+          <li><a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem" target="_blank" rel="noopener">Book on Fresha</a></li>
+          <li>Shop 5C+D, The Avenues, 1 Drama Street, Somerset West, 7130</li>
+          <li>Mon – Fri 09:00 – 18:00</li>
+          <li>Sat 09:00 – 15:00 • Sun &amp; PH Closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Shear Madness Barbershop &amp; Hair Cafe</div>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <span>Powered By <a href="#" class="gold-text">Thirty1</a></span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== FLOATING WHATSAPP ========== -->
+<a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="float-wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+</a>
+
+<script>
+(function() {
+  // ============ CONFIG ============
+  const WHATSAPP_NUMBER = '27614112559';
+  const FRESHA_URL = 'https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem/all-offer?venue=true';
+
+  // ============ HEADER SCROLL ============
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 30) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  });
+
+  // ============ MOBILE MENU ============
+  const menuToggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+      nav.classList.toggle('open');
+      menuToggle.classList.toggle('open');
+    });
+    nav.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        nav.classList.remove('open');
+        menuToggle.classList.remove('open');
+      });
+    });
+  }
+
+  // ============ ACTIVE NAV LINK ============
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = nav ? nav.querySelectorAll('a') : [];
+  window.addEventListener('scroll', function() {
+    let current = '';
+    sections.forEach(function(s) {
+      const top = s.offsetTop - 120;
+      if (window.scrollY >= top) current = s.id;
+    });
+    navLinks.forEach(function(a) {
+      if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+      else a.classList.remove('active');
+    });
+  });
+
+  // ============ PORTFOLIO FILTER ============
+  const filterBar = document.getElementById('filterBar');
+  const portfolioGrid = document.getElementById('portfolioGrid');
+  if (filterBar && portfolioGrid) {
+    filterBar.addEventListener('click', function(e) {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      filterBar.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      portfolioGrid.querySelectorAll('.portfolio-card').forEach(function(card) {
+        const cats = card.dataset.cat.split(' ');
+        const show = filter === 'all' || cats.indexOf(filter) !== -1;
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  }
+
+  // ============ FAQ TOGGLE ============
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    item.querySelector('.faq-question').addEventListener('click', function() {
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // ============ BOOKING TAB SWITCH ============
+  let currentTab = 'whatsapp';
+  const formNote = document.getElementById('formNote');
+  const formFieldsWrap = document.getElementById('formFieldsWrap');
+  const formFreshaCta = document.getElementById('formFreshaCta');
+
+  document.querySelectorAll('.booking-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.booking-tab').forEach(function(t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+      currentTab = tab.dataset.tab;
+      if (currentTab === 'fresha') {
+        formFieldsWrap.style.display = 'none';
+        formFreshaCta.style.display = 'block';
+        formNote.textContent = "Fresha has its own booking form — just click the button below.";
+      } else {
+        formFieldsWrap.style.display = '';
+        formFreshaCta.style.display = 'none';
+        formNote.textContent = 'Your booking opens in WhatsApp — one tap to confirm with our team.';
+      }
+    });
+  });
+
+  // ============ BOOKING FORM SUBMIT ============
+  window.submitBooking = function(e) {
+    e.preventDefault();
+    if (currentTab === 'fresha') {
+      window.open(FRESHA_URL, '_blank');
+      return false;
+    }
+    const name = document.getElementById('bf-name').value.trim();
+    const phone = document.getElementById('bf-phone').value.trim();
+    const email = document.getElementById('bf-email').value.trim();
+    const service = document.getElementById('bf-service').value;
+    const date = document.getElementById('bf-date').value;
+    const message = document.getElementById('bf-message').value.trim();
+    if (!name || !phone || !email || !service || !date) {
+      alert('Please fill in all required fields.');
+      return false;
+    }
+    let dateStr = date;
+    try {
+      const d = new Date(date + 'T00:00:00');
+      dateStr = d.toLocaleDateString('en-ZA', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    } catch (err) {}
+    const lines = [
+      'NEW BOOKING - Shear Madness',
+      '',
+      'Name: ' + name,
+      'Phone: ' + phone,
+      'Email: ' + email,
+      'Service: ' + service,
+      'Preferred Date: ' + dateStr,
+    ];
+    if (message) lines.push('Notes: ' + message);
+    lines.push('', 'Please confirm my appointment. Thank you!');
+    const text = encodeURIComponent(lines.join('\n'));
+    window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text, '_blank');
+    return false;
+  };
+
+  // ============ PRODUCT ORDER -> WHATSAPP ============
+  document.querySelectorAll('.shop-order').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      const product = btn.dataset.product;
+      const price = btn.dataset.price;
+      const text = encodeURIComponent(
+        'PRODUCT ORDER - Shear Madness\n\n' +
+        'Product: ' + product + '\n' +
+        'Price: ' + price + '\n\n' +
+        'Please confirm availability, quantity and payment/delivery options. Thank you!'
+      );
+      window.open('https://wa.me/' + WHATSAPP_NUMBER + '?text=' + text, '_blank');
+    });
+  });
+
+  // ============ SET MIN DATE ============
+  const dateInput = document.getElementById('bf-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+})();
+</script>
+</body>
+</html>
+>
+</body>
+</html>
