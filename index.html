@@ -199,6 +199,9 @@ input, textarea, select { font-family: inherit; }
 .menu-toggle.open span::before { top: 0; transform: rotate(45deg); }
 .menu-toggle.open span::after { top: 0; transform: rotate(-45deg); }
 
+.hdr-call { padding: 10px 16px; }
+.nav-cta, .nav-close, .nav-backdrop { display: none; }
+
 /* ============ HERO ============ */
 .hero {
   padding: 180px 0 140px;
@@ -951,21 +954,53 @@ img.broken + .img-fallback { display: flex; }
   .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
+@media (max-width: 1180px) {
+  /* header fits on one line: logo + icon buttons + hamburger */
+  .header { padding: 14px 0; }
+  .header.scrolled { padding: 10px 0; background: rgba(0,0,0,0.96); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .header-inner { gap: 12px; }
+  .logo-mark { height: 36px; }
+  .header-cta { gap: 8px; }
+  .header-cta .btn { width: 42px; height: 42px; padding: 0; }
+  .header-cta .btn-label { display: none; }
+  .header-cta .btn svg { width: 18px; height: 18px; }
+  .menu-toggle { display: flex; flex-shrink: 0; }
+
+  /* slide-in menu from the right */
+  .nav-backdrop {
+    display: block; position: fixed; inset: 0; z-index: 1;
+    background: rgba(0,0,0,0.65);
+    opacity: 0; visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .nav-backdrop.show { opacity: 1; visibility: visible; }
+  .nav {
+    position: fixed; top: 0; right: 0; bottom: 0; z-index: 2;
+    width: min(320px, 84vw);
+    flex-direction: column; align-items: stretch; gap: 0;
+    padding: 16px 20px 24px;
+    background: #0b0b0b;
+    border-left: 1px solid var(--border);
+    box-shadow: -20px 0 60px rgba(0,0,0,0.6);
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+    transform: translateX(100%); visibility: hidden;
+    transition: transform 0.3s ease, visibility 0.3s ease;
+  }
+  .nav.open { transform: translateX(0); visibility: visible; }
+  .nav-close {
+    display: flex; align-self: flex-end; align-items: center; justify-content: center;
+    width: 42px; height: 42px; margin-bottom: 12px;
+    border: 1px solid var(--border); border-radius: var(--radius-control);
+    color: var(--text);
+  }
+  .nav > a { padding: 16px 4px; font-size: 17px; border-bottom: 1px solid var(--border); border-radius: 0; }
+  .nav > a.active { color: var(--gold); }
+  .nav-cta { display: flex; flex-direction: column; gap: 12px; margin-top: auto; padding-top: 28px; }
+  .nav .nav-cta a.btn { padding: 14px 24px; font-size: 15px; color: #0a0a0a; border-radius: var(--radius-control); }
+  body.menu-open { overflow: hidden; }
+}
 @media (max-width: 768px) {
   .section { padding: 56px 0; }
-  .nav { display: none; }
-  .nav.open {
-    display: flex;
-    position: fixed;
-    top: 70px; left: 0; right: 0;
-    flex-direction: column;
-    background: rgba(0,0,0,0.97);
-    backdrop-filter: blur(20px);
-    padding: 24px;
-    border-bottom: 1px solid var(--border);
-  }
-  .nav.open a { padding: 14px 16px; border-bottom: 1px solid var(--border); border-radius: 0; }
-  .menu-toggle { display: flex; }
   .hero { padding: 140px 0 80px; }
   .hero-meta { gap: 20px; }
   .hero-meta-item .num { font-size: 26px; }
@@ -973,11 +1008,25 @@ img.broken + .img-fallback { display: flex; }
   .shop-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid { grid-template-columns: 1fr; gap: 0; }
   .trust-strip-inner { grid-template-columns: 1fr; gap: 20px; }
-  .form-grid { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .form-group { min-width: 0; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; min-width: 0; }
   .booking-form { padding: 28px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 36px; text-align: center; }
+  .footer-brand { display: flex; flex-direction: column; align-items: center; }
+  .footer-brand p { margin-left: auto; margin-right: auto; }
+  .footer-col ul { align-items: center; }
+  .footer { padding-bottom: 80px; }
   .section-header { margin-bottom: 36px; }
+  .container, .hero > .container { padding-left: 24px; padding-right: 24px; }
+  .hero {
+    min-height: 0;
+    background-image:
+      linear-gradient(180deg, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.88) 100%),
+      url('assets/shop/hero-shop.jpg');
+  }
+  .float-wa { bottom: 16px; right: 16px; width: 52px; height: 52px; }
 }
 @media (max-width: 480px) {
   .hero h1 { font-size: 44px; }
@@ -986,6 +1035,28 @@ img.broken + .img-fallback { display: flex; }
   .shop-grid, .team-grid { grid-template-columns: 1fr; }
   .final-cta-buttons { flex-direction: column; }
   .final-cta-buttons .btn { width: 100%; }
+  .container, .hero > .container { padding-left: 20px; padding-right: 20px; }
+  .hero p.lead { font-size: 17px; margin-bottom: 28px; }
+  .hero-eyebrow { max-width: 100%; }
+  .madness-pitch { font-size: 16px; }
+  .pitch-lead { font-size: 20px !important; }
+  .madness-pitch .pc-text { font-size: 16px; }
+  .service-card, .testimonial-card, .review-cta { padding: 24px; }
+  .booking-form { padding: 20px; }
+  .booking-options { flex-direction: column; border-radius: 20px; }
+  .booking-tab { width: 100%; justify-content: center; padding: 12px 14px; font-size: 13px; }
+  .booking-grid > * { min-width: 0; }
+  .final-cta { padding: 64px 0; }
+  .final-cta p { font-size: 16px; }
+  .faq-question { font-size: 16px; }
+  .logo-mark { height: 32px; }
+}
+@media (max-width: 360px) {
+  .logo-mark { height: 28px; }
+  .header-inner { gap: 8px; }
+  .header-cta { gap: 6px; }
+  .hero h1 { font-size: 40px; }
+  .btn { white-space: normal; text-align: center; }
 }
 </style>
 </head>
@@ -998,27 +1069,41 @@ img.broken + .img-fallback { display: flex; }
       <img src="assets/logo.png" alt="Shear Madness Barbershop & Hair Cafe logo" class="logo-mark">
     </a>
     <nav class="nav" id="nav" aria-label="Primary">
+      <button class="nav-close" id="navClose" type="button" aria-label="Close menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#team">Team</a>
       <a href="#portfolio">Listings</a>
       <a href="#contact">Contact</a>
+      <div class="nav-cta">
+        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          Book via WhatsApp
+        </a>
+        <a href="https://www.fresha.com/en-GB/a/shearmadness-cape-town-somerset-west-the-avenues-1-drama-street-r0te4uem/all-offer?venue=true" class="btn btn-fresha" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          Book on Fresha
+        </a>
+      </div>
     </nav>
     <div class="header-cta">
-      <a href="tel:+27614112559" class="btn btn-secondary" aria-label="Call us" style="padding: 10px 16px;">
+      <a href="tel:+27614112559" class="btn btn-secondary hdr-call" aria-label="Call us" >
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        Call
+        <span class="btn-label">Call</span>
       </a>
-      <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" target="_blank" rel="noopener">
+      <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-whatsapp" aria-label="Book via WhatsApp" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
-        Book via WhatsApp
+        <span class="btn-label">Book via WhatsApp</span>
       </a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="nav" aria-expanded="false">
         <span></span>
       </button>
     </div>
   </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
 </header>
 
 <!-- ========== HERO ========== -->
@@ -1165,24 +1250,6 @@ img.broken + .img-fallback { display: flex; }
         <div class="service-head">
           <div>
             <span class="service-num">03 / Gents</span>
-            <h3>Teen / Student Cut</h3>
-          </div>
-          <span class="service-price">R220</span>
-        </div>
-        <p>A dedicated slot for teens and students. Sharp, modern cuts with the same attention to detail as our adult pricing.</p>
-        <div class="service-meta">
-          <span class="chip">45 min</span>
-          <span class="chip">ID required</span>
-        </div>
-        <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Teen%20%2F%20Student%20Cut%20%28R220%29%20please." class="service-book" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
-          Book via WhatsApp
-        </a>
-      </div>
-      <div class="service-card">
-        <div class="service-head">
-          <div>
-            <span class="service-num">04 / Gents</span>
             <h3>Buzz Cut</h3>
           </div>
           <span class="service-price">R150</span>
@@ -1193,14 +1260,14 @@ img.broken + .img-fallback { display: flex; }
           <span class="chip">All clipper lengths</span>
         </div>
         <a href="https://wa.me/27614112559?text=Hi%20Shear%20Madness%2C%20I%27d%20like%20to%20book%20a%20Buzz%20Cut%20%28R150%29%20please." class="service-book" target="_blank" rel="noopener">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.099-.21.05-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375a9.869 9.869 0 0 1-1.516-5.26c.002-5.45 4.446-9.884 9.942-9.884 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.446 9.885-9.941 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a12.062 12.062 0 0 0 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
           Book via WhatsApp
         </a>
       </div>
       <div class="service-card">
         <div class="service-head">
           <div>
-            <span class="service-num">05 / Gents</span>
+            <span class="service-num">04 / Gents</span>
             <h3>Hot Towel Shave</h3>
           </div>
           <span class="service-price">R250</span>
@@ -1218,7 +1285,7 @@ img.broken + .img-fallback { display: flex; }
       <div class="service-card">
         <div class="service-head">
           <div>
-            <span class="service-num">06 / Gents</span>
+            <span class="service-num">05 / Gents</span>
             <h3>Beard Trim &amp; Shaping</h3>
           </div>
           <span class="service-price">R150</span>
@@ -1236,7 +1303,7 @@ img.broken + .img-fallback { display: flex; }
       <div class="service-card">
         <div class="service-head">
           <div>
-            <span class="service-num">07 / Ladies</span>
+            <span class="service-num">06 / Ladies</span>
             <h3>Wash, Cut &amp; Blow</h3>
           </div>
           <span class="service-price">R350</span>
@@ -1254,7 +1321,7 @@ img.broken + .img-fallback { display: flex; }
       <div class="service-card">
         <div class="service-head">
           <div>
-            <span class="service-num">08 / Ladies</span>
+            <span class="service-num">07 / Ladies</span>
             <h3>Root Touch-Up</h3>
           </div>
           <span class="service-price">R380</span>
@@ -1272,7 +1339,7 @@ img.broken + .img-fallback { display: flex; }
       <div class="service-card">
         <div class="service-head">
           <div>
-            <span class="service-num">09 / Ladies</span>
+            <span class="service-num">08 / Ladies</span>
             <h3>Treatments &amp; Highlights</h3>
           </div>
           <span class="service-price">R450+</span>
@@ -1725,7 +1792,6 @@ img.broken + .img-fallback { display: flex; }
                 <option value="">Select a service…</option>
                 <option value="Gents Cut (R250)">Gents Cut — R250</option>
                 <option value="Gents | Boys | Students (R200)">Gents | Boys | Students — R200</option>
-                <option value="Teen / Student Cut (R220)">Teen / Student Cut — R220</option>
                 <option value="Buzz Cut (R150)">Buzz Cut — R150</option>
                 <option value="Hot Towel Shave (R250)">Hot Towel Shave — R250</option>
                 <option value="Beard Trim & Shaping (R150)">Beard Trim &amp; Shaping — R150</option>
@@ -1895,20 +1961,27 @@ img.broken + .img-fallback { display: flex; }
     else header.classList.remove('scrolled');
   });
 
-  // ============ MOBILE MENU ============
+  // ============ MOBILE MENU (slide-in) ============
   const menuToggle = document.getElementById('menuToggle');
   const nav = document.getElementById('nav');
-  if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-      nav.classList.toggle('open');
-      menuToggle.classList.toggle('open');
-    });
+  const navBackdrop = document.getElementById('navBackdrop');
+  const navClose = document.getElementById('navClose');
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    menuToggle.classList.toggle('open', open);
+    if (navBackdrop) navBackdrop.classList.toggle('show', open);
+    document.body.classList.toggle('menu-open', open);
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function() { setMenu(!nav.classList.contains('open')); });
+    if (navClose) navClose.addEventListener('click', function() { setMenu(false); });
+    if (navBackdrop) navBackdrop.addEventListener('click', function() { setMenu(false); });
     nav.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() {
-        nav.classList.remove('open');
-        menuToggle.classList.remove('open');
-      });
+      a.addEventListener('click', function() { setMenu(false); });
     });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', function() { if (window.innerWidth > 1180) setMenu(false); });
   }
 
   // ============ ACTIVE NAV LINK ============
@@ -2037,8 +2110,5 @@ img.broken + .img-fallback { display: flex; }
   }
 })();
 </script>
-</body>
-</html>
->
 </body>
 </html>
